@@ -33,7 +33,7 @@ def make(
     max_episode_steps = (episode_length + frame_skip - 1) // frame_skip
     time_limit = 1e6
 
-    if not env_id in gym.envs.registry.env_specs:
+    if not env_id in gym.envs.registry:
         task_kwargs = {}
         if seed is not None:
             task_kwargs['random'] = seed
